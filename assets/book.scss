@@ -1,6 +1,10 @@
 @import "defaults";
 @import "variables";
-@import "themes/{{ default "light" .Site.Params.BookTheme }}";
+
+// Custom defined styles
+@import "custom";
+
+@import "themes/{{ default "oreko" .Site.Params.BookTheme }}";
 
 @import "normalize";
 @import "utils";
@@ -11,5 +15,3 @@
 @import "markdown";
 @import "shortcodes";
 
-// Custom defined styles
-@import "custom";
