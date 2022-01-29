@@ -1,0 +1,10 @@
+{{ define "main" }}
+{{.Content}}
+<ul class="all-posts">
+  {{range .Site.RegularPages}}
+  {{if eq (len .Content) 0 }}
+    <li><a href="{{.Permalink}}">{{.Title}}</a></li>
+  {{end}}
+{{end}}
+</ul>
+{{ end }}
