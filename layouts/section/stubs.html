@@ -2,8 +2,8 @@
 {{.Content}}
 <ul class="all-posts">
   {{range .Site.RegularPages}}
-  {{if eq (len .Content) 0 }}
-    <li><a href="{{.Permalink}}">{{.Title}}</a></li>
+  {{if le (.WordCount) 200 }}
+    <li><a href="{{.Permalink}}">{{.Title}}</a> - Word Count: {{.WordCount}}</li>
   {{end}}
 {{end}}
 </ul>
